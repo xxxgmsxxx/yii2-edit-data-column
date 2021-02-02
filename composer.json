@@ -1,0 +1,33 @@
+{
+  "name": "xxxgmsxxx/yii2-edit-data-column",
+  "description": "Column class for standart Yii2 grid with simple edit data",
+  "type": "yii2-extension",
+  "keywords": ["yii2", "yii 2", "grid"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Mykhailo Hrivin"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/xxxgmsxxx/yii2-edit-data-column/issues?state=open",
+    "source": "https://github.com/xxxgmsxxx/yii2-edit-data-column"
+  },
+  "require": {
+    "yiisoft/yii2": "~2.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "xxxgmsxxx\\edit-data-column\\": "src/"
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
