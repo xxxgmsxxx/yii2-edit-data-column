@@ -7,7 +7,7 @@
 
 ?>
 
-<span class="js-data-column-txt-span" id="js-data-column-txt-span-<?= $key ?>" data-id="<?= $key ?>"><?= $value ?></span>
+<span class="js-data-column-txt-span" id="js-data-column-txt-span-<?= $key ?>" data-id="<?= $key ?>"><?= empty($value) ? '(null)' : $value ?></span>
 <div class="input-group js-data-column-edit" id="js-data-column-edit-<?= $key ?>" style="display: none;">
     <input type="text" value="<?= $value ?>"
            data-id="<?= $key ?>" data-url="<?= $url ?>"
