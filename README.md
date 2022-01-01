@@ -106,7 +106,7 @@
 Далее надо создать сам обработчик. Требования к обработчику:
 
  - он должен принимать параметры `id` и `value` - соответственно, в первом будет значение
-поля id редактируемой модели, а во втором - текст из поля ввода
+поля id редактируемой модели, а во втором - текст из поля ввода, так же может принимать параметр `attribute` - в нём передаётся название поля
  
  - возвращать обработчик должен JSON у когорого одно обязательное поле - `result` и необязательное 
 `message` Первое имеет тип boolean и указывает, удалось ли обновить данные, второе содержит расширенное
@@ -131,6 +131,11 @@
             throw new NotAcceptableHttpException('You must send "value" parameter!');
         }
 
+        $attribute = Yii::$app->request->post('attribute', false);
+        if ($attribute === false) {
+            $attribute = 'tag';
+        }
+
         $model = Tags::findOne(['id' => $id]);
 
         $result = [
@@ -144,11 +149,11 @@
                 'message' => 'Model not found!',
             ];
         } else {
-            $model->tag = $value;
+            $model->$attribute = $value;
             if (!$model->save()) {
                 $result = [
                     'result'  => false,
-                    'message' => 'Error on save' . ($model->hasErrors('tag') ? '!' : ': ' . $model->getFirstError('tag')),
+                    'message' => 'Error on save' . ($model->hasErrors($attribute) ? '!' : ': ' . $model->getFirstError($attribute)),
                 ];
             }
         }

@@ -34,6 +34,7 @@ class EditDataColumn extends \yii\grid\DataColumn
                 'key'   => $key,
                 'value' => $model->attributes[$this->attribute],
                 'url'   => $this->ajaxUrl,
+                'attr'  => $this->attribute,
             ]);
         }
 
