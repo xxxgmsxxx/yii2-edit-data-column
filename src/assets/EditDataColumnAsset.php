@@ -8,4 +8,5 @@ class EditDataColumnAsset extends AssetBundle
 {
     public $sourcePath = __DIR__ . '/js';
     public $js = ['edit-data-column.js'];
+    public $depends = [ 'yii\web\YiiAsset', 'yii\bootstrap\BootstrapAsset', ];
 }
