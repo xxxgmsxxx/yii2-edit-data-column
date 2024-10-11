@@ -2,3 +2,4 @@
 /phpunit.xml
 /composer.lock
 .idea/yii_grid_edit_data_column.iml
+.idea/

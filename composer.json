@@ -1,6 +1,6 @@
 {
   "name": "xxxgmsxxx/yii2-edit-data-column",
-  "version": "1.01.003",
+  "version": "1.01.004",
   "description": "Column class for standart Yii2 grid with simple edit data",
   "type": "yii2-extension",
   "keywords": ["yii2", "yii 2", "grid"],
@@ -15,7 +15,8 @@
     "source": "https://github.com/xxxgmsxxx/yii2-edit-data-column"
   },
   "require": {
-    "yiisoft/yii2": "~2.0"
+    "yiisoft/yii2": "~2.0",
+    "yiisoft/yii2-bootstrap5": "~2.0.2"
   },
   "autoload": {
     "psr-4": {
